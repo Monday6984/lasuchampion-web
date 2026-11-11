@@ -1,0 +1,8 @@
+// LASU Champion newsroom: brand accents in the admin.
+:root {
+  --lc-red: #c8191e;
+  --lc-blue: #116cb1;
+}
+.btn--style-primary {
+  --bg-color: var(--lc-blue);
+}
