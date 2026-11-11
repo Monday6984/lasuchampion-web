@@ -26,14 +26,15 @@ export const Members: CollectionConfig = {
     maxLoginAttempts: 8,
     lockTime: 15 * 60 * 1000,
     forgotPassword: {
-      expiration: 2 * 60 * 60 * 1000,
+      // Long enough for set-password invites opened days later; an expired link points to "Ask for a new link".
+      expiration: 3 * 24 * 60 * 60 * 1000,
       generateEmailSubject: () => 'Set your LASU Champion password',
       generateEmailHTML: (args) => {
         const token = (args as { token?: string })?.token ?? ''
         const name = ((args as { user?: { name?: string } })?.user?.name ?? '').split(' ')[0]
         const link = `${siteUrl()}/reset-password?token=${encodeURIComponent(token)}`
         return layout(`<h1 style="margin:0 0 12px;font-size:24px">Set your password</h1>
-<p style="margin:0 0 16px">Hi${name ? ` ${escape(name)}` : ''}, use the button below to choose a new password for your LASU Champion account. The link works for 2 hours.</p>
+<p style="margin:0 0 16px">Hi${name ? ` ${escape(name)}` : ''}, use the button below to choose a new password for your LASU Champion account. The link works for 3 days.</p>
 <a href="${link}" style="display:inline-block;background:#C8191E;color:#FFFFFF;text-decoration:none;font-weight:bold;padding:12px 22px;border-radius:4px">Choose a password</a>
 <p style="margin:24px 0 0;font-size:13px;color:#4A5160">If you didn't ask for this, you can ignore this email.</p>`)
       },
