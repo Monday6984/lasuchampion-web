@@ -25,7 +25,7 @@ export default async function UnsubscribePage({ searchParams }: { searchParams: 
 
   return (
     <section className="wrap narrow section" style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
-      <h1 className="display h-l">{done ? "You're unsubscribed" : 'Unsubscribe'}</h1>
+      <h1 className="hd hd-l">{done ? "You're unsubscribed" : 'Unsubscribe'}</h1>
       {done ? (
         <p style={{ margin: 0, fontSize: 17 }}>
           We won&apos;t email you again. Changed your mind? You can <Link href="/#subscribe">join again</Link> any time.

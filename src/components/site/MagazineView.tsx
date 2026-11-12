@@ -20,7 +20,7 @@ export async function MagazineView({ issue }: { issue: Issue | null }) {
             <span className="kicker" style={{ color: 'var(--accent-light)' }}>
               Now reading · Issue {current.issueNumber} · {formatDate(current.releaseDate, { day: undefined })}
             </span>
-            <h1 id="mag-h" className="display h-xl">
+            <h1 id="mag-h" className="hd hd-xl">
               {current.title}
             </h1>
             {current.summary && (
@@ -41,7 +41,7 @@ export async function MagazineView({ issue }: { issue: Issue | null }) {
         </>
       ) : (
         <section className="wrap section">
-          <h1 className="display h-xl">The magazine</h1>
+          <h1 className="hd hd-xl">The magazine</h1>
           <p className="standfirst" style={{ color: '#D5DCE6', marginTop: 16 }}>
             The first issue is on its way{nextDate ? ` — out ${formatDate(nextDate)}` : ''}.
           </p>
@@ -50,8 +50,8 @@ export async function MagazineView({ issue }: { issue: Issue | null }) {
 
       <section id="archive" aria-labelledby="arch-h" className="archive">
         <div className="wrap section" style={{ paddingTop: 64, paddingBottom: 80 }}>
-          <div className="section-head">
-            <h2 id="arch-h" className="display h-l">
+          <div className="band-head">
+            <h2 id="arch-h" className="hd hd-l">
               All issues
             </h2>
             <span className="muted" style={{ fontSize: 15 }}>

@@ -24,7 +24,7 @@ export default async function TvPage() {
           <span className="kicker" style={{ color: 'var(--accent-light)' }}>
             On YouTube
           </span>
-          <h1 id="tv-h" className="display h-xl">
+          <h1 id="tv-h" className="hd hd-xl">
             Champion TV
           </h1>
           <p className="standfirst" style={{ color: '#D5DCE6' }}>

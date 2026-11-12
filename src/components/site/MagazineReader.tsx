@@ -517,7 +517,7 @@ export default function MagazineReader({ issueId, pdfUrl, title, contents, allow
 
       {contents.length > 0 && (
         <nav aria-labelledby="toc-h" className="toc">
-          <h2 id="toc-h" className="h-m" style={{ fontSize: 20 }}>
+          <h2 id="toc-h" className="hd hd-m" style={{ fontSize: 20 }}>
             In this issue
           </h2>
           <div className="toc-list">
