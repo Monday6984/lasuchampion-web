@@ -69,7 +69,7 @@ export async function MagazineView({ issue }: { issue: Issue | null }) {
                   aria-current={current?.id === i.id ? 'page' : undefined}
                 >
                   <div className="cover-sm">{img && <img src={img} alt="" loading="lazy" />}</div>
-                  <span style={{ fontWeight: 600 }}>
+                  <span style={{ fontWeight: 500 }}>
                     Issue {i.issueNumber}: {i.title}
                   </span>
                   <span className="muted" style={{ fontSize: 13, marginTop: -6 }}>
@@ -99,7 +99,7 @@ export async function MagazineView({ issue }: { issue: Issue | null }) {
                   <br />
                   out {formatDate(nextDate)}
                 </div>
-                <Link href="/#join" style={{ fontSize: 14, fontWeight: 600 }}>
+                <Link href="/#join" style={{ fontSize: 14, fontWeight: 500 }}>
                   Get notified →
                 </Link>
               </div>

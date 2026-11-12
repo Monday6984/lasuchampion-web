@@ -8,7 +8,7 @@ export function ShareButtons({ url, title }: { url: string; title: string }) {
   const t = encodeURIComponent(title)
   return (
     <div className="share">
-      <span style={{ fontSize: 14, fontWeight: 600, marginRight: 6 }}>Share</span>
+      <span style={{ fontSize: 14, fontWeight: 500, marginRight: 6 }}>Share</span>
       <a href={`https://wa.me/?text=${t}%20${u}`} target="_blank" rel="noreferrer">
         WhatsApp
       </a>

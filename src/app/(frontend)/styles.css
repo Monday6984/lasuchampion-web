@@ -94,9 +94,17 @@ a:hover {
 }
 
 /* ---------- Type ---------- */
+b,
+strong,
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 600;
+}
 .hd {
   font-family: var(--font-head);
-  font-weight: 700;
+  font-weight: 600;
   color: var(--ink);
   margin: 0;
   letter-spacing: -0.005em;
@@ -124,7 +132,7 @@ a:hover {
 .kick,
 .kicker {
   font-family: var(--font-display);
-  font-weight: 700;
+  font-weight: 600;
   font-size: 14px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -159,7 +167,7 @@ a:hover {
   max-width: 42em;
 }
 .text-link {
-  font-weight: 600;
+  font-weight: 500;
   text-decoration: none;
 }
 .text-link:hover {
@@ -168,7 +176,7 @@ a:hover {
 .page-title {
   margin: 0;
   font-family: var(--font-display);
-  font-weight: 800;
+  font-weight: 700;
   font-size: clamp(48px, 7vw, 84px);
   line-height: 0.9;
   text-transform: uppercase;
@@ -200,7 +208,7 @@ a:hover {
   background: var(--accent);
   color: #fff;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 15px;
   font-family: inherit;
   border: 0;
@@ -283,7 +291,7 @@ a:hover {
   color: var(--muted);
   font: inherit;
   font-size: 13px;
-  font-weight: 600;
+  font-weight: 500;
   cursor: pointer;
 }
 .link-btn:hover {
@@ -303,7 +311,7 @@ a:hover {
   border: 1.5px solid #c9cdd4;
   border-radius: 4px;
   color: var(--ink);
-  font-weight: 600;
+  font-weight: 500;
   text-decoration: none;
 }
 .pill:hover {
@@ -330,7 +338,7 @@ a:hover {
   min-height: 40px;
 }
 .topbar__date {
-  font-weight: 600;
+  font-weight: 500;
   white-space: nowrap;
 }
 .topbar__account {
@@ -350,7 +358,7 @@ a:hover {
   text-decoration: underline;
 }
 .topbar__strong {
-  font-weight: 700;
+  font-weight: 600;
 }
 .ticker {
   display: flex;
@@ -363,7 +371,7 @@ a:hover {
   background: var(--accent);
   padding: 3px 8px;
   border-radius: 3px;
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   font-size: 11px;
@@ -464,7 +472,7 @@ a:hover {
   color: var(--ink);
   text-decoration: none;
   font-family: var(--font-display);
-  font-weight: 700;
+  font-weight: 600;
   font-size: 16px;
   letter-spacing: 0.05em;
   white-space: nowrap;
@@ -507,7 +515,7 @@ a:hover {
   padding: 10px 12px;
   color: var(--ink);
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 500;
   border-radius: 3px;
 }
 .secnav__menu a:hover,
@@ -538,7 +546,7 @@ a:hover {
   color: var(--ink);
   text-decoration: none;
   font-family: var(--font-display);
-  font-weight: 700;
+  font-weight: 600;
   font-size: 19px;
   letter-spacing: 0.04em;
   text-transform: uppercase;
@@ -647,17 +655,17 @@ a:hover {
 }
 .story-line__time {
   font-size: 12px;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--blue);
 }
 .story-line__title {
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1.35;
   font-size: 15px;
 }
 .story-line__n {
   font-family: var(--font-display);
-  font-weight: 800;
+  font-weight: 700;
   font-size: 28px;
   line-height: 1;
   color: var(--accent);
@@ -666,7 +674,7 @@ a:hover {
 .rail-title {
   margin: 0 0 4px;
   font-family: var(--font-display);
-  font-weight: 800;
+  font-weight: 700;
   font-size: 22px;
   text-transform: uppercase;
   color: var(--accent);
@@ -686,7 +694,7 @@ a:hover {
 .band-head h2 {
   margin: 0;
   font-family: var(--font-display);
-  font-weight: 800;
+  font-weight: 700;
   font-size: clamp(26px, 3vw, 32px);
   text-transform: uppercase;
   letter-spacing: 0.02em;
@@ -702,7 +710,7 @@ a:hover {
   color: #fff;
 }
 .band-head__more {
-  font-weight: 600;
+  font-weight: 500;
   font-size: 14px;
   min-height: 40px;
   display: inline-flex;
@@ -918,7 +926,7 @@ a:hover {
 }
 .join__label {
   margin: 0 0 8px;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 14px;
 }
 
@@ -947,7 +955,7 @@ a:hover {
   color: var(--ink);
   text-decoration: none;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 500;
   transition: background 0.15s, color 0.15s, border-color 0.15s;
 }
 .chip:hover {
@@ -1104,7 +1112,7 @@ a:hover {
 .prose h2,
 .prose h3 {
   font-family: var(--font-head);
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1.2;
   margin: 1.4em 0 0.5em;
 }
@@ -1223,7 +1231,7 @@ a:hover {
   gap: 10px;
 }
 .comment-form__label {
-  font-weight: 600;
+  font-weight: 500;
   font-size: 14px;
 }
 .comment-form textarea {
@@ -1261,7 +1269,7 @@ a:hover {
   font-size: 14px;
 }
 .comment__head a {
-  font-weight: 700;
+  font-weight: 600;
   color: var(--ink);
 }
 .comment__body {
@@ -1343,7 +1351,7 @@ a:hover {
 }
 .what__title {
   font-family: var(--font-display);
-  font-weight: 800;
+  font-weight: 700;
   font-size: 24px;
   text-transform: uppercase;
   color: var(--blue);
@@ -1372,7 +1380,7 @@ a:hover {
 .session summary {
   cursor: pointer;
   padding: 14px 16px;
-  font-weight: 700;
+  font-weight: 600;
   min-height: 48px;
 }
 .session ul {
@@ -1426,7 +1434,7 @@ a:hover {
 }
 .amb-card summary {
   cursor: pointer;
-  font-weight: 600;
+  font-weight: 500;
   color: var(--blue);
   min-height: 36px;
 }
@@ -1494,7 +1502,7 @@ a:hover {
 }
 .stats strong {
   font-family: var(--font-display);
-  font-weight: 800;
+  font-weight: 700;
   font-size: 40px;
   line-height: 1;
 }
@@ -1556,7 +1564,7 @@ a:hover {
   flex-direction: column;
   gap: 6px;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 500;
 }
 .field input,
 .field select,
@@ -1605,7 +1613,7 @@ a:hover {
 }
 .choices legend {
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 500;
   margin-bottom: 10px;
 }
 .choice {
@@ -1666,7 +1674,7 @@ a:hover {
 }
 .form-msg {
   margin: 0;
-  font-weight: 600;
+  font-weight: 500;
   color: #1d5b2c;
 }
 .form-msg.error {
@@ -1796,7 +1804,7 @@ a:hover {
   border-radius: 4px;
   color: var(--ink);
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 500;
 }
 .account__tabs a:hover {
   background: var(--soft);
@@ -1823,7 +1831,7 @@ a:hover {
 .banner--ok {
   background: #e5f2e8;
   color: #1d5b2c;
-  font-weight: 600;
+  font-weight: 500;
 }
 .photo-field {
   display: flex;
@@ -1868,7 +1876,7 @@ a:hover {
   padding: 3px 10px;
   border-radius: 999px;
   font-size: 12px;
-  font-weight: 700;
+  font-weight: 600;
   background: #fff1d6;
   color: #7a4b00;
 }
@@ -1909,12 +1917,12 @@ a:hover {
   font-size: 11px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--accent);
 }
 .house-ad__title {
   font-family: var(--font-head);
-  font-weight: 700;
+  font-weight: 600;
   font-size: 22px;
   line-height: 1.2;
 }
@@ -1930,7 +1938,7 @@ a:hover {
   background: var(--blue);
   color: #fff;
   border-radius: 4px;
-  font-weight: 600;
+  font-weight: 500;
   white-space: nowrap;
 }
 .house-ad--article .house-ad__title {
@@ -1977,7 +1985,7 @@ a:hover {
   margin: 0 0 4px;
   color: #fff;
   font-family: var(--font-display);
-  font-weight: 800;
+  font-weight: 700;
   font-size: 26px;
   text-transform: uppercase;
 }
@@ -2011,7 +2019,7 @@ a:hover {
 }
 .wordmark {
   font-family: var(--font-display);
-  font-weight: 800;
+  font-weight: 700;
   font-size: 32px;
   line-height: 1;
 }
@@ -2035,7 +2043,7 @@ a:hover {
   font-size: 12px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  font-weight: 700;
+  font-weight: 600;
   color: #9aa1ad;
   margin-bottom: 6px;
 }
@@ -2187,6 +2195,13 @@ a:hover {
 .mag-page {
   background: var(--navy);
   color: #fff;
+}
+.mag-page .hd,
+.tv-page .hd {
+  color: #fff;
+}
+.archive .hd {
+  color: var(--ink);
 }
 .mag-page a {
   color: var(--accent-light);
@@ -2583,12 +2598,12 @@ a:hover {
   background: var(--accent);
   color: #fff;
   font-size: 12px;
-  font-weight: 600;
+  font-weight: 500;
   padding: 3px 8px;
   border-radius: 999px;
 }
 .tv-card-title {
-  font-weight: 600;
+  font-weight: 500;
   font-size: 16px;
   line-height: 1.35;
   display: -webkit-box;
