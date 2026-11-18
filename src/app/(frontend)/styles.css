@@ -1327,6 +1327,219 @@ h4 {
   width: 260px;
   height: auto;
 }
+/* Our story: the founder's account, milestones and the people who launched it */
+.story-band {
+  border-top: 1px solid var(--line);
+  padding: 56px 0 64px;
+}
+.founder {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px 56px;
+  align-items: flex-start;
+}
+.founder__card {
+  flex: 0 1 300px;
+  margin: 0;
+  position: sticky;
+  top: 24px;
+}
+.founder__card img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 4px;
+}
+.founder__card figcaption {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding-top: 12px;
+  border-top: 4px solid var(--accent);
+  margin-top: 14px;
+}
+.founder__card figcaption strong {
+  font-family: var(--font-head);
+  font-size: 20px;
+}
+.founder__card figcaption span {
+  font-size: 14px;
+  color: var(--muted);
+}
+.founder__story {
+  flex: 1 1 460px;
+  min-width: 0;
+  max-width: 720px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.founder__story .body-text {
+  font-family: var(--font-read);
+  font-size: 18px;
+}
+.founder__pull {
+  margin: 4px 0 8px;
+  padding-left: 18px;
+  border-left: 4px solid var(--accent);
+  font-family: var(--font-read);
+  font-style: italic;
+  font-size: clamp(21px, 2.2vw, 26px);
+  line-height: 1.35;
+  color: var(--navy);
+}
+.founder__more[open] > * + * {
+  margin-top: 16px;
+}
+.founder__more[open] > summary + * {
+  margin-top: 0;
+}
+.founder__more summary {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 18px;
+  border: 1.5px solid #c9cdd4;
+  border-radius: 4px;
+  font-weight: 500;
+  list-style: none;
+  width: max-content;
+}
+.founder__more summary::-webkit-details-marker {
+  display: none;
+}
+.founder__more summary:hover {
+  border-color: var(--ink);
+}
+.founder__more[open] summary {
+  display: none;
+}
+.founder__signoff {
+  margin: 8px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+}
+.founder__signoff strong {
+  font-family: var(--font-head);
+  font-size: 19px;
+  color: var(--navy);
+}
+.founder__signoff span {
+  margin-top: 6px;
+  font-size: 14px;
+  color: var(--muted);
+}
+.milestones {
+  list-style: none;
+  margin: 56px 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr));
+  gap: 0;
+  border-top: 2px solid var(--ink);
+}
+.milestones li {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 22px 24px 4px 0;
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--ink-2);
+}
+.milestones li::before {
+  content: '';
+  position: absolute;
+  top: -7px;
+  left: 0;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+.milestones strong {
+  color: var(--ink);
+  font-size: 16px;
+}
+.milestones__year {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1;
+  color: var(--blue);
+}
+.patrons-wrap {
+  margin-top: 56px;
+}
+.patrons {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));
+  gap: 20px 28px;
+}
+.patron {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+.patron img {
+  flex: 0 0 132px;
+  width: 132px;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 4px;
+  background: var(--placeholder);
+}
+.patron__text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+.patron__text strong {
+  font-family: var(--font-head);
+  font-size: 18px;
+  line-height: 1.25;
+}
+@media (max-width: 700px) {
+  .milestones {
+    border-top: 0;
+    border-left: 2px solid var(--ink);
+    margin-left: 6px;
+    padding-left: 22px;
+  }
+  .milestones li {
+    padding: 0 0 22px;
+  }
+  .milestones li::before {
+    top: 4px;
+    left: -29px;
+  }
+  .founder__card {
+    position: static;
+    flex-basis: 100%;
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 16px;
+    align-items: end;
+  }
+  .founder__card figcaption {
+    margin-top: 0;
+  }
+  .patron img {
+    flex-basis: 104px;
+    width: 104px;
+  }
+}
 .what-we-do {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));

@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 import { getExcos, getSections, getSettings, mediaUrl } from '@/lib/data'
+import { founder, milestones, patrons, signOff, story, storyIntroCount } from '@/lib/our-story'
 
 export const revalidate = 300
 export const metadata: Metadata = {
@@ -33,6 +34,78 @@ export default async function AboutPage() {
         </div>
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img className="about-hero__logo" src="/brand/lasu-champion-logo.png" alt="LASU Champion logo" width={280} height={300} />
+      </section>
+
+      <section aria-labelledby="story-h" className="story-band">
+        <div className="wrap founder">
+          <figure className="founder__card">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={founder.photo} alt={founder.name} width={640} height={800} />
+            <figcaption>
+              <strong>{founder.name}</strong>
+              <span>{founder.title}</span>
+            </figcaption>
+          </figure>
+          <div className="founder__story">
+            <span className="kick">Our story</span>
+            <h2 id="story-h" className="hd hd-xl">
+              A vision conceived in 1987
+            </h2>
+            <blockquote className="founder__pull">To make LASU great is a task that must be done!</blockquote>
+            {story.slice(0, storyIntroCount).map((p, i) => (
+              <p key={i} className="body-text">
+                {p}
+              </p>
+            ))}
+            <details className="founder__more">
+              <summary>Read the full story</summary>
+              {story.slice(storyIntroCount).map((p, i) => (
+                <p key={i} className="body-text">
+                  {p}
+                </p>
+              ))}
+              <p className="founder__signoff">
+                {signOff.map((l) => (
+                  <strong key={l}>{l}</strong>
+                ))}
+                <span>
+                  By {founder.name}, {founder.title}
+                </span>
+              </p>
+            </details>
+          </div>
+        </div>
+
+        <div className="wrap">
+          <ol className="milestones" aria-label="Milestones">
+            {milestones.map((m) => (
+              <li key={m.year}>
+                <span className="milestones__year">{m.year}</span>
+                <strong>{m.title}</strong>
+                <span>{m.text}</span>
+              </li>
+            ))}
+          </ol>
+        </div>
+
+        <div className="wrap patrons-wrap">
+          <div className="band-head">
+            <h2>Those who launched it</h2>
+          </div>
+          <ul className="patrons">
+            {patrons.map((p) => (
+              <li key={p.name} className="patron">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={p.photo} alt={p.name} width={400} height={500} loading="lazy" />
+                <div className="patron__text">
+                  <span className="kick kick--sm">{p.role}</span>
+                  <strong>{p.name}</strong>
+                  <span className="meta">{p.note}</span>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </div>
       </section>
 
       <section aria-label="What we do" className="soft-band">
