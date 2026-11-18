@@ -83,6 +83,16 @@ export default async function AboutPage() {
                 <span className="milestones__year">{m.year}</span>
                 <strong>{m.title}</strong>
                 <span>{m.text}</span>
+                {m.person && (
+                  <span className="milestones__person">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src={m.person.photo} alt={m.person.name} width={320} height={400} loading="lazy" />
+                    <span>
+                      <strong>{m.person.name}</strong>
+                      <span className="meta">{m.person.role}</span>
+                    </span>
+                  </span>
+                )}
               </li>
             ))}
           </ol>

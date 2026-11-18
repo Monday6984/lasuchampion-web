@@ -30,11 +30,18 @@ export const signOff = ['LASU Champion: Priding in the company of World Changers
 /** The opening paragraphs shown before "Read the full story". */
 export const storyIntroCount = 3
 
-export const milestones = [
+type Milestone = { year: string; title: string; text: string; person?: { name: string; role: string; photo: string } }
+
+export const milestones: Milestone[] = [
   { year: '1987', title: 'The vision', text: 'First articles in the Daily Times, The Punch and Daily Champion, including a call to restore student unionism at LASU.' },
   { year: '1989', title: 'The Cries of LASUites', text: 'Launched by the late Akran of Badagry at the LASU auditorium near Badagry Gate.' },
   { year: '1990', title: 'LASU Champion Magazine', text: 'Launched by the late Alhaji Lateef Kayode Jakande, first Executive Governor of Lagos State.' },
-  { year: '2025', title: 'The revival', text: 'LASU Champion Press Club officially approved on 19 March 2025.' },
+  {
+    year: '2025',
+    title: 'The revival',
+    text: 'LASU Champion Press Club officially approved on 19 March 2025, with the support of the Dean of Student Affairs and his team.',
+    person: { name: 'Professor Abiodun Fatai Abatan', role: 'Dean of Student Affairs', photo: '/about/abiodun-fatai-abatan.jpg' },
+  },
 ]
 
 export const patrons = [
