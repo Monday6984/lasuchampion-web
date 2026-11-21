@@ -171,6 +171,7 @@ const social = [
   { label: 'Instagram', url: 'https://www.instagram.com/lasu_champion' },
   { label: 'YouTube', url: 'https://www.youtube.com/@LASUChampionTV' },
   { label: 'X', url: 'https://x.com/LASUChampion' },
+  { label: 'TikTok', url: 'https://www.tiktok.com/@lasuchampion' },
 ]
 
 export async function loadSections(payload: Payload) {
